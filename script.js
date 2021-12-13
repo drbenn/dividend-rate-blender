@@ -68,6 +68,7 @@ const fetchStockData = async function () {
         blendedDividendRate += Number(divProportion.toFixed(2));
       });
 
+      let roundedDivYieldTTM = divYieldTTM.toFixed(2);
       let roundedTotalAnnualDividends = totalAnnualDividends.toFixed(2);
       let roundedBlendedDividendRate = blendedDividendRate.toFixed(2);
       let roundedTotalInvestment = totalInvestment.toFixed(2);
@@ -82,7 +83,9 @@ const fetchStockData = async function () {
       </div>
       <div class="stock-attribute">
           <div class="attribute-title">Dividend Yield</div>
-          <div class="value-text value-divyield">${divYieldTTM + "%"}</div>
+          <div class="value-text value-divyield">${
+            roundedDivYieldTTM + "%"
+          }</div>
       </div>
       <div class="stock-attribute">
           <div class="attribute-title">$ Investment Amount</div>
