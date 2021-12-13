@@ -69,6 +69,8 @@ const fetchStockData = async function () {
       });
 
       let roundedTotalAnnualDividends = totalAnnualDividends.toFixed(2);
+      let roundedBlendedDividendRate = blendedDividendRate.toFixed(2);
+      let roundedTotalInvestment = totalInvestment.toFixed(2);
 
       /* ==========================HTML TO POPULATE BLENDER======================== */
       const dividendRow = `
@@ -106,11 +108,11 @@ const fetchStockData = async function () {
       <div class="break"></div>
         <div class="stock-attribute">
           <div class="attribute-title">Blended Dividend Yield</div>
-          <div class="value-text">${blendedDividendRate + "%"}</div>
+          <div class="value-text">${roundedBlendedDividendRate + "%"}</div>
         </div>
         <div class="stock-attribute">
           <div class="attribute-title">Total Invested</div>
-          <div class="value-text">${"$" + totalInvestment}</div>
+          <div class="value-text">${"$" + roundedTotalInvestment}</div>
         </div>
         <div class="stock-attribute">
           <div class="attribute-title">Total Annual Dividends</div>
