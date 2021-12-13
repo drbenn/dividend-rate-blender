@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dividend Rate Blender</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dbendev"><a href="https://danbennett.dev">https://danbennett.dev</a></div>
+    <div class="title-block">Dividend Rate Blender</div>
+
+    <button class="show-modal">Help/Info</button>
+    <button id="clearBtn" class="">Clear Dividend List</button>
+
+
+    <div class="blendContainer"></div>
+
+
+      <div class="app-container">
+
+
+        <div class="ticker-input-container">
+          <div>Enter Stock Ticker</div>
+          <input
+            type="text"
+            id="ticker_input_box"
+            placeholder="Example 'MSFT'"
+          />
+          <br />
+          <div>Enter Investment Amount</div>
+          <input
+            type="text"
+            id="investment_input_box"
+            placeholder="Example '1000'"
+          />
+          <button id="submitBtn" class="">Add Stock to List &rarr;</button>
+        </div>
+
+
+        <div class="stockListContainer">
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    
+    <div class="modal hidden">
+      <button class="close-modal">&times</button>
+        <h2>Help/Info 🤯</h2><br><br>
+        <p>
+          Enter an active ticker from the NYSE and a dollar amount to invest. Investing into multiple dividend stocks with different dividend rates, you can see how much to invest in which stock to hit your desired dividend yield.
+        </p><br>
+        <div>
+          <a href="https://site.financialmodelingprep.com/developer/docs">This tool uses the free version of FMP API, only 250 calls are allowed per day. </a>
+        </div><br>
+        <p>
+          If the FMP API calls are expensed or currently offline, four dummy variables listed below with different dividend yield rates have been created for demonstration purposes;
+          <ul>
+            <li>DIRT - 1%</li>
+            <li>ROCK - 3%</li>
+            <li>SAND - 5%</li>
+            <li>LAVA - 9%</li>
+          </ul>
+        </p><br>
+        <p>
+          <a href="https://danbennett.dev">danbennett.dev</a>
+          <br>
+          <a href="https://github.com/drbenn">GitHub</a>
+        </p>
+    </div>
+    <div class="overlay hidden"></div>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
